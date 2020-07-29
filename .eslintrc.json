@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "standard"
+  ],
+  "env": {
+    "jest": true,
+    "node": true
+  },
+  "plugins": [],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "template-curly-spacing": "off",
+    "indent": [
+      "warn",
+      2,
+      {
+        "ignoredNodes": [
+          "TemplateLiteral"
+        ],
+        "SwitchCase": 1
+      }
+    ],
+    "no-unused-vars": 1
+  }
+}

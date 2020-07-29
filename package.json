@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.5",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "eslint": "^7.5.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prefer-arrow-functions": "^3.0.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn test"
+    }
+  },
+  "workspaces": [
+    "modules/*"
+  ],
+  "scripts": {
+    "build": "webpack --config-register @babel/register",
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "test": "jest"
+  }
+}
