@@ -1,3 +1,0 @@
-# Object Hash
-
-Sample module
