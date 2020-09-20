@@ -20,7 +20,7 @@ export default {
   entry: getEntries('modules/**/src/index.js'),
   target: 'node',
   output: {
-    libraryTarget: 'commonjs',
+    libraryTarget: 'commonjs2',
     path: __dirname,
     filename: '[name]/index.js'
   },
